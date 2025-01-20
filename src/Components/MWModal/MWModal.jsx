@@ -193,7 +193,7 @@ function MWModal({
               </thead>
               <tbody>
                 {[...waypoints]
-                  .sort((a, b) => (a.type === "polygon" ? -1 : 1)) // Ensure polygon appears first
+                  .sort((a, b) => (a.type === "polygon" ? -1 : 1)) 
                   .map((wp, index) => renderWaypointRow(wp, index, waypoints))}
               </tbody>
             </table>
@@ -204,8 +204,8 @@ function MWModal({
               showInstructions
                 ? onGenerateData
                 : () => {
-                    onGenerateData(); // This will now call handleDrawNewPoints
-                    setModalVisible(false); // Close the modal
+                    onGenerateData(); 
+                    setModalVisible(false); 
                   }
             }
             style={{ marginTop: "15px", width:"200px", marginLeft:"230px" }}

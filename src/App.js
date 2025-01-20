@@ -64,8 +64,8 @@ function App() {
   };
 
   const handleDrawNewPoints = () => {
-    setWaypointModalVisible(false); // Hide the waypoint modal
-    setDrawingMode("line"); // Enable drawing mode
+    setWaypointModalVisible(false);
+    setDrawingMode("line"); 
   };
   const menuButtonStyle = {
     position: 'absolute',

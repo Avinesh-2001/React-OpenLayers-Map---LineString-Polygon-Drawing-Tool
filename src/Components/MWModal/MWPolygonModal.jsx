@@ -11,7 +11,7 @@ function MWPolygonModal({ polygonCoordinates, insertPolygon, closeModal }) {
     }
 
     const toRadians = (deg) => (deg * Math.PI) / 180;
-    const R = 6371000; // Earth's radius in meters
+    const R = 6371000; 
     const [lon1, lat1] = coord1;
     const [lon2, lat2] = coord2;
 
@@ -47,10 +47,8 @@ function MWPolygonModal({ polygonCoordinates, insertPolygon, closeModal }) {
   };
 
   const handleImport = () => {
-    // Create array of points including the closing point
     const points = [...polygonCoordinates];
     if (points.length > 0) {
-      // Add the first point at the end to close the polygon
       points.push(points[0]);
     }
     insertPolygon(points);

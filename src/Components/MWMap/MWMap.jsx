@@ -47,7 +47,6 @@ function MWMap({
       }),
     });
   
-    // Handle Enter key press to finish drawing
     const handleKeyPress = (event) => {
       if (event.key === 'Enter' && drawRef.current) {
         drawRef.current.finishDrawing();
@@ -56,7 +55,6 @@ function MWMap({
   
     document.addEventListener('keypress', handleKeyPress);
   
-    // Cleanup function to remove event listener and dispose map
     return () => {
       document.removeEventListener('keypress', handleKeyPress);
       if (mapInstance.current) {
